@@ -1,0 +1,46 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    @Styles.Render("~/Content/bootstrap/bootstrap.min.css")
+    @Styles.Render("~/Content/bootstrap-responsive.min.css")
+    <body>
+
+        <div>
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="page-header">
+                            <h1>Hello.. My tec Bits</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Navigation</li>
+                            <li class="active"><a href="#">ASP.Net</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">VB.Net</a></li>
+                            <li><a href="#">c#</a></li>
+                        </ul>
+                    </div>
+                    <div class="span9"></pre></pre>
+                        <div>@RenderSection("featured", required: false)</div>
+                        <pre>
+<pre></pre></pre>
+                        <div>@RenderBody()</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+       
+    </body>
+</html>
