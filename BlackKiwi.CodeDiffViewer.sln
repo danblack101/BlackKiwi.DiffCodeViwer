@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackKiwi.CodeDiffViewer", "BlackKiwi.CodeDiffViewer\BlackKiwi.CodeDiffViewer.csproj", "{C30F5FE1-55BA-4136-8487-01B4455E7870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackKiwi.CodeDiffViewer.Tests", "BlackKiwi.CodeDiffViewer.Tests\BlackKiwi.CodeDiffViewer.Tests.csproj", "{AC8A6CB1-C76E-4454-B442-3F359929BB94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2DEC3663-467B-4AF7-8040-FADC95CCD1A0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackKiwi.CodeDiffViewer.IntegrationTests", "BlackKiwi.CodeDiffViewer.IntegrationTests\BlackKiwi.CodeDiffViewer.IntegrationTests.csproj", "{73321499-F3C6-4E5F-9F7D-C71B983E7BB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C30F5FE1-55BA-4136-8487-01B4455E7870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30F5FE1-55BA-4136-8487-01B4455E7870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30F5FE1-55BA-4136-8487-01B4455E7870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30F5FE1-55BA-4136-8487-01B4455E7870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8A6CB1-C76E-4454-B442-3F359929BB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8A6CB1-C76E-4454-B442-3F359929BB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8A6CB1-C76E-4454-B442-3F359929BB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8A6CB1-C76E-4454-B442-3F359929BB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73321499-F3C6-4E5F-9F7D-C71B983E7BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73321499-F3C6-4E5F-9F7D-C71B983E7BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73321499-F3C6-4E5F-9F7D-C71B983E7BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73321499-F3C6-4E5F-9F7D-C71B983E7BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
