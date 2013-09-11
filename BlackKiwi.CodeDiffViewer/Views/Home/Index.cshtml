@@ -19,7 +19,7 @@
 </style>
 <form action="~/Home/UploadFile" enctype="multipart/form-data" method="post">
     <input type="file" name="Image">
-    <input type="submit" value="Save">
+    <input type="submit" value="Upload">
 </form>
 <fieldset>
     <legend></legend>
@@ -27,42 +27,46 @@
 
 
 <div class="row">
-    @foreach (FormattedFile file in Model.Files)
+    @if(Model != null)
     {
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">@file.Filename</h3>
-            </div>
+        foreach (FormattedFile file in Model.Files)
+        {
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@file.Filename</h3>
+                </div>
                 
-            <div class="panel-body">
-                <table class="table">
+                <div class="panel-body">
+                    <table class="table">
             
            
-                    @foreach (FormattedLine line in file.Lines)
-                    {
-                        <tr>
-                            @if (line is AddedLine)
-                            {
-                                <td class="success">@line.Displayline</td>
-                            }
-                            else if (line is RemovedLine)
-                            {
-                                <td class="danger">@line.Displayline</td>
-                            }
-                            else if (line is UnchangedLine)
-                            {
-                                <td class="">@line.Displayline</td>
-                            }
-                            else
-                            {
-                                //header
-                            }
+                        @foreach (FormattedLine line in file.Lines)
+                        {
+                            <tr>
+                                @if (line is AddedLine)
+                                {
+                                    <td class="success">@line.Displayline</td>
+                                }
+                                else if (line is RemovedLine)
+                                {
+                                    <td class="danger">@line.Displayline</td>
+                                }
+                                else if (line is UnchangedLine)
+                                {
+                                    <td class="">@line.Displayline</td>
+                                }
+                                else
+                                {
+                                    //header
+                                }
                    
-                        </tr>
-                    }
-                </table>
-            </div>
+                            </tr>
+
+                        }
+                    </table>
+                </div>
              
-        </div>
+            </div>
+        }
     }
 </div>

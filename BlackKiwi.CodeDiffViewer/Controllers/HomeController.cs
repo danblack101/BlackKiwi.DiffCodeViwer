@@ -13,14 +13,7 @@ namespace BlackKiwi.CodeDiffViewer.Controllers
 
         public ActionResult Index()
         {
-            var diff = new Diff();
-            using (var sr = new StreamReader(@"C:\diff5.txt"))
-            {
-                diff.Load(sr);
-            }
-            var formattedDiff = new FormattedDiff(diff);
-
-            return View(formattedDiff);
+            return View();
         }
         [HttpPost]
         public ActionResult UploadFile()
