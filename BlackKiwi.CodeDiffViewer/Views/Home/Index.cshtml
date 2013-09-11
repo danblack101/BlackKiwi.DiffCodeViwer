@@ -18,12 +18,18 @@
   
 </style>
 <form action="~/Home/UploadFile" enctype="multipart/form-data" method="post">
+    <fieldset>
+    <legend>Mercurial Diff File Viewer</legend>
+    Create a diff Mercurial diff file by comparing to repositories <br/>
+    e.g <b>hg incoming -p /path/to/repo2</b> or <b>hg outgoing -p /path/to/repo2</b><br/>
+    or load the <a href="~/SampleFiles/diff.txt">Sample File</a>
+    <br/>
     <input type="file" name="Image">
     <input type="submit" value="Upload">
+  </fieldset>
+
 </form>
-<fieldset>
-    <legend></legend>
-</fieldset>
+
 
 
 <div class="row">

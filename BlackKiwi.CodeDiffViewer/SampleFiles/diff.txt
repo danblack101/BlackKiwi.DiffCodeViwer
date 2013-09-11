@@ -1,0 +1,79 @@
+comparing with C:\Dev\SeAccountsMerc\seaccountsmerc
+searching for changes
+changeset:   99:39b3ea756252
+tag:         tip
+user:        danblack101
+date:        Wed Sep 11 18:52:40 2013 +1200
+summary:     testing
+
+diff -r cd28963de65b -r 39b3ea756252 QueueTester/QueueItemGenerator/QueueItemGenerator/Program.cs
+--- a/QueueTester/QueueItemGenerator/QueueItemGenerator/Program.cs	Wed Sep 04 20:01:17 2013 +1200
++++ b/QueueTester/QueueItemGenerator/QueueItemGenerator/Program.cs	Wed Sep 11 18:52:40 2013 +1200
+@@ -10,10 +10,12 @@
+             var factory = new ConnectionFactory();
+             factory.HostName = "localhost";
+             var queueName = "seAccountRefresh2";
++			here 2
+             using (var connection = factory.CreateConnection())
+             using (var channel = connection.CreateModel()) {
+                 channel.QueueDeclare(queueName, false, false, false, null);
+                 while (true) {
++				heres a change
+                     Console.WriteLine("Create Queue Item. Press any key. Ctr + C to quit, DEL key to clear queue");
+                     var key = Console.ReadKey();
+                     if (key.Key.Equals(ConsoleKey.Delete)) {
+diff -r cd28963de65b -r 39b3ea756252 QueueTester/QueueItemGenerator/QueueItemGenerator/QueueItemGenerator.csproj
+--- a/QueueTester/QueueItemGenerator/QueueItemGenerator/QueueItemGenerator.csproj	Wed Sep 04 20:01:17 2013 +1200
++++ b/QueueTester/QueueItemGenerator/QueueItemGenerator/QueueItemGenerator.csproj	Wed Sep 11 18:52:40 2013 +1200
+@@ -11,6 +11,7 @@
+     <AssemblyName>QueueItemGenerator</AssemblyName>
+     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+     <FileAlignment>512</FileAlignment>
++	<FileAlignment>513</FileAlignment>
+   </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+     <PlatformTarget>AnyCPU</PlatformTarget>
+@@ -18,7 +19,7 @@
+     <DebugType>full</DebugType>
+     <Optimize>false</Optimize>
+     <OutputPath>bin\Debug\</OutputPath>
+-    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <DefineConstants>DEBUG;TRACE1</DefineConstants>
+     <ErrorReport>prompt</ErrorReport>
+     <WarningLevel>4</WarningLevel>
+   </PropertyGroup>
+diff -r cd28963de65b -r 39b3ea756252 SeAccounts.Core/Account.cs
+--- a/SeAccounts.Core/Account.cs	Wed Sep 04 20:01:17 2013 +1200
++++ /dev/null	Thu Jan 01 00:00:00 1970 +0000
+@@ -1,29 +0,0 @@
+-﻿using System.Collections.Generic;
+-
+-namespace SeAccounts.Core
+-{
+-    public class Account : Entity<string>
+-    {
+-        public Account()
+-        {
+-            Balances = new List<Balance>();   
+-        }
+-        public Account(string username)
+-        {
+-            Username = username;
+-            Balances = new List<Balance>();
+-        }
+-        public string LogInUrl { get; set; }
+-        public string LoginUserName { get; set; }
+-        public string LoginPassword { get; set; }
+-        public string Name { get; set; }
+-        public string ImageName { get; set; }
+-        public string Username { get; set; }
+-        public List<Balance> Balances { get; set; }
+-        public override string ToString() {
+-
+-            return string.Format("Account: {0}, {1}, {2}", Name, LogInUrl, LoginUserName);
+-        }
+-
+-    }
+-}
+\ No newline at end of file
+
